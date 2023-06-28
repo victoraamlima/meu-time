@@ -41,9 +41,8 @@ const Login = () => {
       .then((data) => {
         if (validFetch(data.errors)) {
           data.response.sort((a, b) =>
-            a.country.name.localeCompare(b.country.name)
+            a.name.localeCompare(b.name)
           )
-
           setCountries(data.response)
           setSelectedCountry(data.response[0])
           setKey(temporaryKey)
